@@ -1,0 +1,15 @@
+namespace Framework.Pages
+{
+    public class astroAssignment
+    {
+        public void Goto()
+        {
+            Browser.Goto(".my");
+        }
+
+        public bool IsAt()
+        {
+            return Browser.Title.Contains("Astro");
+        }
+    }
+}

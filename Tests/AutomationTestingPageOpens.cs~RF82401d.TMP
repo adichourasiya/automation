@@ -1,0 +1,31 @@
+﻿using Framework;
+using Framework.Pages;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
+using System;
+
+namespace Tests
+{
+    [TestClass]
+    public class AutomationTestingPageOpens : TestBase
+    {
+        [TestMethod]
+        public void VerifyPageOpen()
+        {
+            //assert if page loads in 1 second using HTML footer
+            var time1 = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
+            Pages.launch.GotoMyPage();
+            Assert.IsTrue(Pages.launch.IsAt());
+            Assert.IsTrue(Browser.Exists(By );
+            var time2 = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
+            long totalTime = time2 - time1;
+            Console.WriteLine(("Total Time for page load - " + totalTime));
+
+
+            //assert page load ends in 5 seconds
+            long loadtime = (long)((IJavaScriptExecutor)Browser.Driver).ExecuteScript("return performance.timing.loadEventEnd - performance.timing.navigationStart; ");
+            Console.WriteLine(("Total Time for page load 2- " + loadtime));
+            
+        }
+    }
+}
