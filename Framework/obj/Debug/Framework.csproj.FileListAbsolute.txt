@@ -8,3 +8,12 @@ C:\Users\achourasiya\Documents\Framework\Framework\bin\Debug\WebDriver.Support.x
 C:\Users\achourasiya\Documents\Framework\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache
 C:\Users\achourasiya\Documents\Framework\Framework\obj\Debug\Framework.exe
 C:\Users\achourasiya\Documents\Framework\Framework\obj\Debug\Framework.pdb
+C:\Users\achourasiya\Documents\automation\Framework\bin\Debug\Framework.exe.config
+C:\Users\achourasiya\Documents\automation\Framework\obj\Debug\Framework.exe
+C:\Users\achourasiya\Documents\automation\Framework\obj\Debug\Framework.pdb
+C:\Users\achourasiya\Documents\automation\Framework\bin\Debug\Framework.exe
+C:\Users\achourasiya\Documents\automation\Framework\bin\Debug\Framework.pdb
+C:\Users\achourasiya\Documents\automation\Framework\bin\Debug\WebDriver.dll
+C:\Users\achourasiya\Documents\automation\Framework\bin\Debug\WebDriver.Support.dll
+C:\Users\achourasiya\Documents\automation\Framework\bin\Debug\WebDriver.xml
+C:\Users\achourasiya\Documents\automation\Framework\bin\Debug\WebDriver.Support.xml

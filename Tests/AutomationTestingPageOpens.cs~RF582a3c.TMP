@@ -11,19 +11,17 @@ namespace Tests
     [TestClass]
     public class AutomationTestingPageOpens : TestBase
     {
-        List<int> timer=new List<int>();
-        
+
         [TestMethod]
         public void VerifyPageLoad()
         {
-            //start timer
-            var watch = System.Diagnostics.Stopwatch.StartNew();
-            timer.Add(watch.Elapsed.Seconds);                  //Timer start
-
+            IList<long> time;
+            var time1_0 = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;                  //start timer
+            time.Add(time1_0);
             //STEP 1 - a - Load www.astro.com.my            
             Pages.launch.GotoAstroMyPage();
             Assert.IsTrue(Pages.launch.IsAtMyPage(), "Step 1 Failure : Could not reach to My Page");
-            timer.Add(watch.Elapsed.Seconds);                  //Step 1 complete
+            var time1_1 = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;                  //Step 1 complete
 
             /*STEP 2 - b - Verify the page loads within .1 seconds – capture failure; but go to next step
              *         c - Verify the page loads within 5 seconds  */
@@ -41,9 +39,7 @@ namespace Tests
                 Assert.Fail("Step 2 Failure : Page didn't load in 20 sec");
             }
             Console.WriteLine(("Note : Total Time for page load " + pageLoadTime + "sec."));
-            //Step 2 complete                    
-            timer.Add(watch.Elapsed.Seconds);                    //Step 2 complete
-            watch.Stop();
+            var time1_2 = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;                   //Step 2 complete                    
         }
 
         //STEP 3 - d = Verify the page loads completely without error 
@@ -51,13 +47,12 @@ namespace Tests
         [TestMethod]
         public void VerifyPageLinks()
         {
-            //start timer
-            var watch = System.Diagnostics.Stopwatch.StartNew();
+            var time2_0 = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;                  //start timer for step 1 of second test
             Pages.launch.GotoAstroMyPage();
             Assert.IsTrue(Pages.launch.IsAtMyPage(), "Could not reach to My Page");
             if (!Browser.Exists(By.LinkText("Melayu")))
             { Assert.Fail("Page didn't load completely ; link in footer is missing."); }
-            timer.Add(watch.Elapsed.Seconds);                   //Step 3 complete
+            var time2_1 = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;                   //Step 1 complete                    
 
             /*STEP 4 - e = Ensure none of the links within this page results in a non 200 header response
              *iterate through all URLs including those not non 200 */
@@ -75,33 +70,25 @@ namespace Tests
                     response.Close();
                     if (response.StatusCode == HttpStatusCode.OK)
                     {
-                        Console.WriteLine("\n Response code for Link no." + (i+1) + " is 200.");
+                        Console.WriteLine("\n Response code for Link no." + i + " is 200.");
                         Console.WriteLine("Link address : " + url);
                     }
                     else
                     {
-                        Console.WriteLine("\n Warning : Response code for Link  no." + (i + 1) + " is not 200.");
+                        Console.WriteLine("\n Warning : Response code for Link  no." + i + " is not 200.");
                         Console.WriteLine("Link address : " + url);
                     }
                 }
                 catch
                 {
                     //Any exception will returns false.
-                }                
+                }
+                var time2_2 = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;                   //Step 2 complete                    
             }
-            timer.Add(watch.Elapsed.Seconds);                    //Step 4 complete
 
             //f = For every step above capture the output and response times
-            Console.WriteLine("Time taken to complete step 1: " + (timer[1]));
-            Console.WriteLine("Time taken to complete step 2: " + (timer[2]));
-            Console.WriteLine("Time taken to complete step 3: " + (timer[3]));
-            Console.WriteLine("Time taken to complete step 4: " + (timer[4]));
-                                                               //Step 5 complete
+            Console.WriteLine("Time taken to complete page load step 1: " time1_1- time1_0);
+
         }
-
-
-        /*Determine the sequence the promotion called “Auto-Debit Campaign” is in
-a. If this campaign is more than the third campaign in the sequence of hero banners the test should fail and alert operator (in example below the
-campaign is sixth and should fail)*/
-    }    
+    }
 }

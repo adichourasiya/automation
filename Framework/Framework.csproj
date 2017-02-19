@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Browser.cs" />
-    <Compile Include="Pages\AutomationTestingPracticePage.cs" />
+    <Compile Include="Pages\AutomationPractice.cs" />
     <Compile Include="Pages\Pages.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
