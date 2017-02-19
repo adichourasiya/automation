@@ -15,7 +15,6 @@ C:\Users\achourasiya\Documents\automation\Tests\bin\Debug\Framework.exe
 C:\Users\achourasiya\Documents\automation\Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\achourasiya\Documents\automation\Tests\bin\Debug\WebDriver.Support.dll
 C:\Users\achourasiya\Documents\automation\Tests\bin\Debug\Framework.pdb
-C:\Users\achourasiya\Documents\automation\Tests\bin\Debug\WebDriver.xml
 C:\Users\achourasiya\Documents\automation\Tests\bin\Debug\WebDriver.Support.xml
 C:\Users\achourasiya\Documents\automation\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
 C:\Users\achourasiya\Documents\automation\Tests\obj\Debug\Tests.dll

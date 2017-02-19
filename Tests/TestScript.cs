@@ -9,7 +9,7 @@ using System.Net;
 namespace Tests
 {
     [TestClass]
-    public class AutomationTestingPageOpens : TestBase
+    public class TestScript : TestBase
     {
         List<int> timer=new List<int>();
         
@@ -91,17 +91,23 @@ namespace Tests
             }
             timer.Add(watch.Elapsed.Seconds);                    //Step 4 complete
 
-            //f = For every step above capture the output and response times
-            Console.WriteLine("Time taken to complete step 1: " + (timer[1]));
-            Console.WriteLine("Time taken to complete step 2: " + (timer[2]));
-            Console.WriteLine("Time taken to complete step 3: " + (timer[3]));
-            Console.WriteLine("Time taken to complete step 4: " + (timer[4]));
+            //STEP 4 - f = For every step above capture the output and response times
+            Console.WriteLine("\n Time taken to complete step 1 : " + (timer[1]));
+            Console.WriteLine("Time taken to complete step 2 : " + (timer[2]));
+            Console.WriteLine("Time taken to complete step 3 : " + (timer[3]));
+            Console.WriteLine("Time taken to complete step 4 : " + (timer[4]));
                                                                //Step 5 complete
         }
-
 
         /*Determine the sequence the promotion called “Auto-Debit Campaign” is in
 a. If this campaign is more than the third campaign in the sequence of hero banners the test should fail and alert operator (in example below the
 campaign is sixth and should fail)*/
-    }    
-}
+        [TestMethod]
+        public void VerifyPromotion()
+        {
+            Pages.launch.GotoAstroMyPage();
+            Assert.IsTrue(Pages.launch.IsAtMyPage(), "Could not reach to My Page");
+ 
+        }
+    }
+    }

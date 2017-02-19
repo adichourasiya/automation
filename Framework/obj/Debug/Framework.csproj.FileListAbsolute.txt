@@ -17,3 +17,4 @@ C:\Users\achourasiya\Documents\automation\Framework\bin\Debug\WebDriver.dll
 C:\Users\achourasiya\Documents\automation\Framework\bin\Debug\WebDriver.Support.dll
 C:\Users\achourasiya\Documents\automation\Framework\bin\Debug\WebDriver.xml
 C:\Users\achourasiya\Documents\automation\Framework\bin\Debug\WebDriver.Support.xml
+C:\Users\achourasiya\Documents\automation\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache

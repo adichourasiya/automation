@@ -7,7 +7,7 @@ namespace Framework
     {
         private static IWebDriver _webDriver = new FirefoxDriver();
 
-        private static string _baseUrl = "http://www.google.com";
+        private static string _baseUrl = "http://astro.com";
 
         public static ISearchContext Driver
         {
